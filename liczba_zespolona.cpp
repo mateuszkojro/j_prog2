@@ -9,7 +9,7 @@ private:
   double im;
 public:
 
-friend std::istream& operator>>(std::istream& in,zesp z);
+friend std::istream& operator>>(std::istream& in,zesp z);//dokonczyc to
 
   zesp();
   zesp(double re,double im);
@@ -27,21 +27,8 @@ friend std::istream& operator>>(std::istream& in,zesp z);
   void show();
 };
 
-std::ostream& operator<<(std::ostream& ou,zesp z){
-  ou << z.get_re() << '_';
-  ou << z.get_im();
-  return ou;
-}
-
-std::istream& operator>>(std::istream& in,zesp z){
-double x,y;
-
-   in >> x;
-   z.set_re(x);
-  in >>  y;
-  z.set_im(y);
-  return in;
-}
+std::ostream& operator<<(std::ostream& ou, zesp z);
+std::istream& operator>>(std::istream& in, zesp z);
 
 int main(){
   zesp a(2,1), b(3,2), c;
@@ -61,7 +48,7 @@ zesp zesp::operator+(zesp a){
   zesp c;
 
   c.re = this->re + a.re;
-  c.im = this->im  + a.im;
+  c.im = this->im + a.im;
 
   return c;
 
@@ -96,4 +83,21 @@ zesp zesp::add(zesp a){
 
 void zesp::show(){
   printf("re: %f im: %f\n",re,im );
+}
+
+std::ostream& operator<<(std::ostream& ou, zesp z){
+  ou << z.get_re() << '_';
+  ou << z.get_im();
+  return ou;
+}
+
+std::istream& operator>>(std::istream& in, zesp z){
+double x,y;
+
+  in >> x;
+  z.set_re(x);
+  in >>  y;
+  z.set_im(y);
+
+  return in;
 }

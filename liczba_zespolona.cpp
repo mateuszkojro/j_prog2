@@ -1,8 +1,6 @@
 #include<iostream>
 #include<cmath>
 
-//zadanie domowe dolozyc odejmowanie mnozenie dzielenie wartosc bezwzgledna
-
 class zesp {
 
 private:
@@ -10,7 +8,8 @@ private:
   double im;
 public:
 
-//friend std::istream& operator>>(std::istream& in,zesp z); //dokonczyc to
+friend std::istream& operator>>(std::istream& in,zesp& z);
+friend std::ostream& operator<<(std::ostream& ou, zesp z);
 
   zesp();
   zesp(double re,double im);
@@ -32,9 +31,6 @@ public:
 
   void show();
 };
-
-std::ostream& operator<<(std::ostream& ou, zesp z);
-std::istream& operator>>(std::istream& in, zesp& z);
 
 int main(){
   zesp a, b, c;
@@ -115,17 +111,14 @@ void zesp::show(){
 
 
 std::ostream& operator<<(std::ostream& ou, zesp z){
-  ou << z.get_re() << '_';
-  ou << z.get_im();
+  ou << "(" <<z.re << ',' << z.im << ')';
   return ou;
 }
 
 std::istream& operator>>(std::istream& in, zesp& z){
 double x,y;
-  in >> x;
-  z.set_re(x);
-  in >>  y;
-  z.set_im(y);
+  in >> z.re;
+  in >> z.im;
 
   return in;
 }

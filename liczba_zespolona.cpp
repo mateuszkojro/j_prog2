@@ -12,6 +12,7 @@ public:
   zesp(double re,double im);
   ~zesp(){}
 
+  zesp operator+(zesp z);
   zesp add(zesp);
   void set_re(double){this->re = re ;}
   void set_im(double){this->im = im ;}
@@ -26,11 +27,21 @@ public:
 int main(){
   zesp a(2,1), b(3,2), c;
 
-  c = a.add(b);
+  c = a+b;
 
   c.show();
 
   return 0;
+}
+
+
+zesp zesp::operator+(zesp a){
+  zesp c;
+
+  c.re = this->re + a.re;
+  c.im = this->im  + a.im;
+
+  return c;
 }
 
 zesp::zesp():re(0),im(0){}
@@ -42,11 +53,11 @@ zesp::zesp(double re ,double im){
 
   }
 
-zesp zesp::add(zesp b){
+zesp zesp::add(zesp a){
   zesp c;
 
-  c.re = this->re + b.re;
-  c.im = this->im  + b.im;
+  c.re = this->re + a.re;
+  c.im = this->im  + a.im;
 
   return c;
 }

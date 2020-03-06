@@ -12,7 +12,8 @@ public:
   zesp(double re,double im);
   ~zesp(){}
 
-  zesp operator+(zesp z);
+  zesp operator+(zesp);
+  zesp operator-(zesp);
   zesp add(zesp);
   void set_re(double){this->re = re ;}
   void set_im(double){this->im = im ;}
@@ -23,13 +24,19 @@ public:
   void show();
 };
 
+std::ostream& operator<<(std::ostream& ou,zesp z){
+  ou << z.get_re() << '_';
+  ou << z.get_im();
+  return ou;
+}
+
 
 int main(){
   zesp a(2,1), b(3,2), c;
 
   c = a+b;
 
-  c.show();
+  std::cout << c << '\n';
 
   return 0;
 }
@@ -40,6 +47,16 @@ zesp zesp::operator+(zesp a){
 
   c.re = this->re + a.re;
   c.im = this->im  + a.im;
+
+  return c;
+
+}
+
+zesp zesp::operator-(zesp a){
+  zesp c;
+
+  c.re = this->re - a.re;
+  c.im = this->im  - a.im;
 
   return c;
 }
@@ -63,5 +80,5 @@ zesp zesp::add(zesp a){
 }
 
 void zesp::show(){
-  printf("%f+i%f",re,im );
+  printf("re: %f im: %f\n",re,im );
 }

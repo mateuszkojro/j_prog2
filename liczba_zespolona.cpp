@@ -8,6 +8,9 @@ private:
   double re;
   double im;
 public:
+
+friend std::istream& operator>>(std::istream& in,zesp z);
+
   zesp();
   zesp(double re,double im);
   ~zesp(){}
@@ -30,9 +33,21 @@ std::ostream& operator<<(std::ostream& ou,zesp z){
   return ou;
 }
 
+std::istream& operator>>(std::istream& in,zesp z){
+double x,y;
+
+   in >> x;
+   z.set_re(x);
+  in >>  y;
+  z.set_im(y);
+  return in;
+}
 
 int main(){
   zesp a(2,1), b(3,2), c;
+
+  std::cin >> a;
+  std::cin >> b;
 
   c = a+b;
 

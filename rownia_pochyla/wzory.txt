@@ -1,0 +1,18 @@
+Dane:
+
+a - przyspieszenie
+m - masa
+g - przyspieszenie ziemskie
+Vk - predkosc na koncu
+α - kat nachylenia rowni
+μ - wspolczynnik tarcia
+v0 - predkosc poczatkowa
+t - czas zjazdu
+s - dlugosc skoczni
+
+Wzory:
+
+a = g * (sin(α) - cos(μ))
+Vk = v0 + at;
+t = sqrt(a/(2 * s))
+

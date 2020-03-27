@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1585327392 source:c:\users\mkojr\workspace\rownia_pochyla\main.cpp
+	<iostream>
+	"include\rownia.h"
+
+1585326302 c:\users\mkojr\workspace\rownia_pochyla\include\rownia.h
+
+1585327416 source:c:\users\mkojr\workspace\rownia_pochyla\src\rownia.cpp
+	<cmath>
+	"rownia.h"
+

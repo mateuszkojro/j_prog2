@@ -5,8 +5,12 @@
 static const double pi = 3.141592;
 static const double g = 9.81;
 
+void init(){
+    kat = kat * pi/180;
+}
+
 void rownia::set_kat(double _kat){
-    kat = _kat;
+    kat = _kat * pi/180;
 }
 
 void rownia::set_dlugosc(double _dlugosc){
@@ -18,7 +22,7 @@ double rownia::get_dlugosc(){
 }
 
 double rownia::get_kat(){
-    return kat;
+    return kat * 180/pi;
 }
 
 double rownia::calculate_a(){

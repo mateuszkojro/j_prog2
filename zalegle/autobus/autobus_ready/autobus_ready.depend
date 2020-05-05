@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1588529570 source:/home/mateusz/workspace/j_prog2/zalegle/autobus/autobus_ready/main.cpp
+	<iostream>
+	"autobus.h"
+	"osoba.h"
+	"my_exc.h"
+
+1588528625 /home/mateusz/workspace/j_prog2/zalegle/autobus/autobus_ready/include/autobus.h
+	<iostream>
+	"osoba.h"
+	"my_exc.h"
+
+1588525617 /home/mateusz/workspace/j_prog2/zalegle/autobus/autobus_ready/include/osoba.h
+	"autobus.h"
+
+1588529460 source:/home/mateusz/workspace/j_prog2/zalegle/autobus/autobus_ready/src/autobus.cpp
+	"autobus.h"
+	"osoba.h"
+	"my_exc.h"
+
+1588528644 source:/home/mateusz/workspace/j_prog2/zalegle/autobus/autobus_ready/src/osoba.cpp
+	"osoba.h"
+
+1588528809 /home/mateusz/workspace/j_prog2/zalegle/autobus/autobus_ready/include/my_exc.h
+	<exception>
+

@@ -1,0 +1,6 @@
+<h1 id="zadania-dziedzieczenie">Zadania dziedzieczenie</h1>
+<ol type="1">
+<li><p>w temacie piszecie ‘Dziedziczenie 1’; Klasa A (nazwy klas możecie wpisać dowolnie) ma metody dla wykonania działań dodawania i odejmowania; Klasa B dziedziczy klasę A i potrafi mnożyć i dzielić. Zadeklarowany w main-ie obiekt typu B prezentuje wszystkie cztery działania.</p></li>
+<li><p>w temacie piszecie ‘Dziedziczenie 2’; Proszę zrobić przykład dziedziczenia wg własnego pomysłu;</p></li>
+<li><p>w temacie piszecie ‘Dziedziczenie 3’; proszę zaprojektować klasę, bez dziedziczenia !, reprezentującą tablicę liczb. Projekt ten omówię za tydzień i na jego bazie zbudujemy dalszą część zadania.</p></li>
+</ol>

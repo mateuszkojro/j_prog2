@@ -11,9 +11,7 @@ template<class Type> class table{
 		size_t = _size;
 		tab = new Type[size_t];
 	}
-	~table(){
-		delete [] tab;
-	}
+	~table(){delete [] tab;}
 	table(table& other){
 		tab = new Type[other.size()];
 		size_t = other.size();
@@ -53,10 +51,6 @@ int main(){
 	std::cout << a.size() << std::endl;
 	std::cout << b.size() << std::endl;
 	table<int> tab(10);
-	for (int i = 0 ;i < 10000000;i++){
-		tab.append(i);
-		std::cout << tab[tab.size()-1] << "\t" << tab.size() << std::endl;
-	}
 
 return 0;
 }

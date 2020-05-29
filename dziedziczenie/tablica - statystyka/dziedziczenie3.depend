@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1590504249 source:c:\users\mateu\onedrive\documents\j_prog2\dziedziczenie\tablica - statystyka\main.cpp
+	<iostream>
+	"table.h"
+	"stats.h"
+
+1590499316 c:\users\mateu\onedrive\documents\j_prog2\dziedziczenie\tablica - statystyka\include\table.h
+	<stdexcept>
+	<iostream>
+
+1590493389 c:\users\mateu\onedrive\documents\j_prog2\dziedziczenie\tablica - statystyka\include\stat.h
+
+1590503909 c:\users\mateu\onedrive\documents\j_prog2\dziedziczenie\tablica - statystyka\include\stats.h
+	"table.h"
+
